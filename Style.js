@@ -1,0 +1,75 @@
+import { StyleSheet } from "react-native";
+
+const styles = StyleSheet.create({
+    mainBody: {
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    SignUpCard: {
+        backgroundColor: "lightblue",
+        paddingHorizontal: 30,
+        paddingVertical: 30,
+        borderRadius: 15,
+        width: '80%',
+        height: 'max-content'
+    },
+    email: {
+        marginVertical: 5,
+        borderWidth: 2,
+        borderColor: 'black',
+        borderRadius: 15,
+        paddingHorizontal: 15,
+        paddingVertical: 10
+    },
+    password: {
+        marginVertical: 5,
+        borderWidth: 2,
+        borderColor: 'black',
+        borderRadius: 15,
+        paddingHorizontal: 15,
+        paddingVertical: 10
+    },
+    heading: {
+        fontSize: 40,
+        textAlign: 'center',
+        fontWeight: 'bold',
+        marginBottom: 10
+    },
+    Signupbtn: {
+        backgroundColor: 'rgba(0,0,0,0.5)',
+        paddingHorizontal: 20,
+        paddingVertical: 5,
+        borderRadius: 15,
+        marginTop: 15
+    },
+    SignupbtnTxt: {
+        color: 'white',
+        textAlign: 'center',
+        fontSize: 25
+    },
+    logoutBtn:{
+        marginTop: 10,
+        paddingHorizontal: 20,
+        paddingVertical: 5,
+        borderRadius: 10,
+        backgroundColor: 'red'
+    },
+    logoutBtntxt:{
+        color: 'white'
+    },
+    loadingpage:{
+        flex: 1,
+        width: "100%",
+        height: "100%",
+    },
+    loadingimage:{
+        // backgroundColor: 'red',
+        width: "100%",
+        height: "100%"
+    }
+});
+
+
+export default styles;
