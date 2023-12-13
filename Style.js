@@ -52,6 +52,7 @@ const styles = StyleSheet.create({
         marginTop: 5
     },
     nextBtnOfBoarding:{
+        marginVertical: 5,
         backgroundColor: 'white',
         width: "max-content",
         marginLeft: 'auto',

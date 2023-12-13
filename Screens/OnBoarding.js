@@ -2,11 +2,71 @@ import React, { useState } from 'react';
 import { View, Text, Image, TouchableOpacity, ScrollView } from 'react-native';
 import styles from '../Style.js';
 import imageone from '../images/Peron-Using-Phone.png';
-import { useNavigation } from '@react-navigation/native';
+import imagetwo from '../images/Second-Onboarding.png'
+import imagethree from '../images/Third-Onboarding.png'
 
-const OnBoarding = () => {
+const OnBoarding = ({ navigation }) => {
     const [currentPage, setCurrentPage] = useState(1);
-    const navigation = useNavigation();
+
+    function FirstOnBoarding() {
+        return (
+            <View>
+                <View style={styles.firstLineOfBoarding}>
+                    <Text style={styles.progessbarsuccesBoarding}>_</Text>
+                    <Text style={styles.progessbarwaitBoarding}>_</Text>
+                    <Text style={styles.progessbarwaitBoarding}>_</Text>
+                </View>
+                <Text style={styles.headingofBoarding}>Discover My Store!</Text>
+                <Image style={styles.imageofBoarding} source={imageone} />
+                <Text style={styles.paraofBoarding}>Sign up for a personalized shopping experience. Explore top products, manage your profile, and effortlessly add items to your store. Dive into analytics to track your performance. Let's shop smart with My Store! 🌟🛒</Text>
+                {/* Add any additional components or navigation buttons as needed */}
+                <TouchableOpacity style={styles.nextBtnOfBoarding} onPress={() => setCurrentPage(2)}>
+                    <Text style={styles.nextbtnTxtOfBoarding}>→</Text>
+                </TouchableOpacity>
+            </View>
+        );
+    }
+
+    function SecondBoarding() {
+        return (
+            <View>
+                <View style={styles.firstLineOfBoarding}>
+                    <Text style={styles.progessbarsuccesBoarding}>_</Text>
+                    <Text style={styles.progessbarsuccesBoarding}>_</Text>
+                    <Text style={styles.progessbarwaitBoarding}>_</Text>
+                </View>
+                <Text style={styles.headingofBoarding}>Sell Smart with My Store</Text>
+                <Image style={styles.imageofBoarding} source={imagetwo} />
+                <Text style={styles.paraofBoarding}>Add products effortlessly, personalize your storefront with a logo and banner, and manage inventory seamlessly. Connect with customers and embark on a successful selling journey. My Store makes selling simple and efficient. 🚀💼
+                </Text>
+                {/* Add any additional components or navigation buttons as needed */}
+                <TouchableOpacity style={styles.nextBtnOfBoarding} onPress={() => setCurrentPage(3)}>
+                    <Text style={styles.nextbtnTxtOfBoarding}>→</Text>
+                </TouchableOpacity>
+            </View>
+        );
+    }
+
+    function ThirdBoarding() {
+        return (
+            <View>
+                <View style={styles.firstLineOfBoarding}>
+                    <Text style={styles.progessbarsuccesBoarding}>_</Text>
+                    <Text style={styles.progessbarsuccesBoarding}>_</Text>
+                    <Text style={styles.progessbarsuccesBoarding}>_</Text>
+                </View>
+                <Text style={styles.headingofBoarding}>Community Connections!</Text>
+                <Image style={styles.imageofBoarding} source={imagethree} />
+                <Text style={styles.paraofBoarding}>Explore discussions, find inspiration in success stories, and stay updated with My Store. Click "Finish" to join the community and unlock the full potential of your My Store experience. 🌐🛍️✨
+                </Text>
+                <TouchableOpacity style={styles.nextBtnOfBoarding} onPress={() => navigation.navigate('Login')}>
+                    <Text style={styles.nextbtnTxtOfBoarding}>→</Text>
+                </TouchableOpacity>
+            </View>
+        );
+    }
+
+
 
     const renderOnBoardingPage = () => {
         if (currentPage === 1) {
@@ -21,41 +81,5 @@ const OnBoarding = () => {
     return <ScrollView style={styles.OnBoardingPage}>{renderOnBoardingPage()}</ScrollView>;
 };
 
-function SecondBoarding() {
-    // <Image style={styles.imageofzBoarding} source={ Your second image source */}
-    const navigation = useNavigation();
-
-    return (
-        <View>
-            <Text style={styles.headingofBoarding}>Second On Boarding</Text>
-            <Text style={styles.paraofBoarding}>Custom content for the Second On Boarding</Text>
-            <TouchableOpacity style={styles.nextBtnOfBoarding} onPress={() => setCurrentPage(3)}>
-                <Text style={styles.nextbtnTxtOfBoarding}>→</Text>
-            </TouchableOpacity>
-        </View>
-    );
-}
-
-function ThirdBoarding() {
-    // <Image style={styles.imageofBoarding} source={Your third image source */}
-    return (
-        <View>
-            <Text style={styles.headingofBoarding}>Third On Boarding</Text>
-            <Text style={styles.paraofBoarding}>Custom content for the Third On Boarding</Text>
-            {/* Add any additional components or navigation buttons as needed */}
-        </View>
-    );
-}
-
-function ThirdBoarding() {
-    {/* /* <Image style={styles.imageofBoarding} source={Your third image source */ }
-    return (
-        <View>
-            <Text style={styles.headingofBoarding}>Third On Boarding</Text>
-            <Text style={styles.paraofBoarding}>Custom content for the Third On Boarding</Text>
-            {/* Add any additional components or navigation buttons as needed */}
-        </View>
-    );
-}
 
 export default OnBoarding;

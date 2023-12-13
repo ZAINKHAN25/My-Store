@@ -23,7 +23,7 @@ export default function App() {
           <Stack.Screen options={{ headerShown: false }} name="Loading" component={LoadingComponent} />
           <Stack.Screen options={{ headerShown: false }} name="Home" component={HomeComponent} />
           <Stack.Screen options={{ headerShown: false }} name="Signup" component={SignupComponent} />
-          {/* <Stack.Screen options={{ headerShown: false }} name="Login" component={LoginComponent} /> */}
+          <Stack.Screen options={{ headerShown: false }} name="Login" component={LoginComponent} />
           <Stack.Screen options={{ headerShown: false }} name="OnBoarding" component={OnBoardingComponent} />
         </Stack.Navigator>
       </NavigationContainer>
