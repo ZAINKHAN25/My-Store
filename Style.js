@@ -1,73 +1,67 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
-    mainBody: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    SignUpCard: {
-        backgroundColor: "lightblue",
-        paddingHorizontal: 30,
-        paddingVertical: 30,
-        borderRadius: 15,
-        width: '80%',
-        height: 'max-content'
-    },
-    email: {
-        marginVertical: 5,
-        borderWidth: 2,
-        borderColor: 'black',
-        borderRadius: 15,
-        paddingHorizontal: 15,
-        paddingVertical: 10
-    },
-    password: {
-        marginVertical: 5,
-        borderWidth: 2,
-        borderColor: 'black',
-        borderRadius: 15,
-        paddingHorizontal: 15,
-        paddingVertical: 10
-    },
-    heading: {
-        fontSize: 40,
-        textAlign: 'center',
-        fontWeight: 'bold',
-        marginBottom: 10
-    },
-    Signupbtn: {
-        backgroundColor: 'rgba(0,0,0,0.5)',
-        paddingHorizontal: 20,
-        paddingVertical: 5,
-        borderRadius: 15,
-        marginTop: 15
-    },
-    SignupbtnTxt: {
-        color: 'white',
-        textAlign: 'center',
-        fontSize: 25
-    },
-    logoutBtn:{
-        marginTop: 10,
-        paddingHorizontal: 20,
-        paddingVertical: 5,
-        borderRadius: 10,
-        backgroundColor: 'red'
-    },
-    logoutBtntxt:{
-        color: 'white'
-    },
-    loadingpage:{
+    loadingpage: {
         flex: 1,
         width: "100%",
         height: "100%",
     },
-    loadingimage:{
-        // backgroundColor: 'red',
+    loadingimage: {
         width: "100%",
         height: "100%"
+    },
+    OnBoardingPage:{
+        backgroundColor: '#F75D37',
+        width: "100%",
+        height: "100%",
+        display: 'flex',
+        paddingHorizontal: 30
+    },
+    firstLineOfBoarding: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    progessbarsuccesBoarding: {
+        color: 'white',
+        fontSize: 50,
+        marginHorizontal: 5
+    },
+    progessbarwaitBoarding: {
+        color: '#FABD',
+        fontSize: 50,
+        marginHorizontal: 5,
+        fontWeight: 'bold'
+    },
+    imageofBoarding:{
+        width: "100%",
+        height: '40vh',
+        marginVertical: 30
+    },
+    headingofBoarding: {
+        fontSize: 40,
+        color: 'white',
+        fontFamily: 'Pridi'
+    },
+    paraofBoarding: {
+        color: 'white',
+        fontFamily: "Pridi",
+        fontWeight: 'Semi-Bold',
+        fontSize: 20,
+        marginTop: 5
+    },
+    nextBtnOfBoarding:{
+        backgroundColor: 'white',
+        width: "max-content",
+        marginLeft: 'auto',
+        borderRadius: '50%',
+        paddingVertical: 10,
+        paddingHorizontal: 13
+    },
+    nextbtnTxtOfBoarding:{
+        color: '#F75D37',
+        fontSize: 30
     }
 });
 
