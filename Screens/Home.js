@@ -22,7 +22,8 @@ function HomeComponent({ navigation }) {
                 }
             } else {
                 console.log("Banda login hi nah hai");
-                navigation.navigate('OnBoarding')
+                // navigation.navigate('OnBoarding')
+                navigation.navigate('Login')
             }
         });
         

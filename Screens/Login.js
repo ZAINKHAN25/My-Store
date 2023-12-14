@@ -2,8 +2,10 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { auth, db, doc, getDoc, signInWithEmailAndPassword } from "../firebaseConfig.js";
 import { changeloginPersonData } from "../store/Slices/loginPersonData.js";
-import { Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Image, Text, TextInput, TouchableOpacity, View } from "react-native";
 import styles from "../Style.js";
+
+import logo from '../images/Loading.png'
 
 function LoginComponent({ navigation }) {
   let [email, setemail] = useState('')
@@ -39,35 +41,46 @@ function LoginComponent({ navigation }) {
       });
   }
   return (
-    <View style={styles.mainBody}>
-      <View style={styles.SignUpCard}>
-        <Text style={styles.heading}>Login</Text>
-        <TextInput
-          placeholder='Email'
-          keyboardType='email-address'
-          style={styles.email}
-          value={email}
-          onChange={(e) => setemail(e.target.value)}
-        />
-        <TextInput
-          placeholder='Password'
-          secureTextEntry={true}
-          style={styles.password}
-          value={password}
-          onChange={(e) => setpassword(e.target.value)}
-        />
+
+    <View style={styles.SignuporRegisterBody}>
+      <View style={styles.SignUpLoginCard}>
+        <Text style={styles.headingoFLogin}>Login</Text>
+        <Image style={styles.logoofregisterLogin} source={logo} />
+        {/* div of input */}
+        <View style={styles.InputLineOfRegister}>
+          <Text style={styles.InputHeadingRegister}>Email addres:</Text>
+          <TextInput
+            placeholder='javed@mail.com etc..'
+            keyboardType='email-address'
+            style={styles.InputofRegister}
+            placeholderTextColor={"#FABDBD"}
+            value={email}
+            onChange={(e) => setemail(e.target.value)}
+          />
+        </View>
+        {/* div of input */}
+        <View style={styles.InputLineOfRegister}>
+          <Text style={styles.InputHeadingRegister}>Password here:</Text>
+          <TextInput
+            placeholder='Password'
+            secureTextEntry={true}
+            style={styles.InputofRegister}
+            placeholderTextColor={"#FABDBD"}
+            value={password}
+            onChange={(e) => setpassword(e.target.value)}
+          />
+        </View>
+
         <TouchableOpacity
           style={styles.Signupbtn}
           onPress={Signin}
         >
           <Text style={styles.SignupbtnTxt}>Login</Text>
         </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.Signupbtn}
-          onPress={()=> navigation.navigate('Signup')}
-        >
-          <Text style={styles.SignupbtnTxt}>Go to Signup Page</Text>
-        </TouchableOpacity>
+
+        <Text style={styles.orWordInLogin}>or</Text>
+
+        <Text onPress={() => navigation.navigate('Signup')} style={styles.gotToRegisterPage}>Go to <Text style={styles.underline}>Signup Page</Text></Text>
       </View>
     </View>
   )
