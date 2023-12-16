@@ -66,8 +66,9 @@ const styles = StyleSheet.create({
     },
     SignuporRegisterBody: {
         backgroundColor: '#F75D37',
-        flex: 1,
-        alignItems: 'center'
+        minHeight: '100%',
+        alignItems: 'center',
+        paddingBottom: 15
     },
     headingoFLogin: {
         color: 'white',
@@ -101,7 +102,8 @@ const styles = StyleSheet.create({
     },
     logoofregisterLogin: {
         width: "300px",
-        height: "200px"
+        height: "200px",
+        marginHorizontal: 'auto'
     },
     Signupbtn: {
         width: "80vw",
@@ -123,8 +125,12 @@ const styles = StyleSheet.create({
         marginVertical: 10,
         fontSize: 18
     },
-    underline:{
-        textDecoration: 'underline'
+    underline: {
+        textDecorationLine: 'underline'
+    },
+    gotToRegisterPage: {
+        color: 'white',
+        textAlign: 'center'
     }
 });
 

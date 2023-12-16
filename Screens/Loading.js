@@ -10,7 +10,7 @@ function Loading({ navigation }) {
     }, [])
     return (
         <View style={styles.loadingpage}>
-            <Image style={styles.loadingimage} source={require("../Images/Loading.png")} />
+            <Image style={styles.loadingimage} source={require("../images/Loading.png")} />
         </View>
     )
 }
